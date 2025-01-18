@@ -8,11 +8,11 @@ This project automates the update and packaging process of a `.exe` file generat
 python-automation-project
 ├── src
 │   ├── app.py               # Main entry point of the application
-│   ├── updater.py           # Logic for updating the local repository
+│   ├── updater.py           # Logic to update the local repository
 │   ├── packager.py          # Handles the packaging process with PyInstaller
 │   ├── webhook_listener.py   # Listens for GitHub Webhook events
 │   └── templates
-│       └── index.html       # HTML template for status notifications
+│       └── index.html       # HTML template for web interface and notifications
 ├── requirements.txt         # Project dependencies
 ├── pyinstaller.spec         # PyInstaller configuration file
 └── README.md                # Project documentation
@@ -49,7 +49,8 @@ python-automation-project
 ## Notes
 
 - Ensure that the `.exe` file is not running during the packaging process to avoid conflicts.
-- Modify the `requirements.txt` file as needed to include any additional dependencies.
+- Modify the `pyinstaller.spec` file as needed to customize the build process.
+- Update the `requirements.txt` file to include any additional dependencies.
 
 ## License
 
