@@ -1,5 +1,7 @@
+main
 # This file is the configuration file for PyInstaller.
-
+# FILE: /python-automation-project/python-automation-project/pyinstaller.spec
+version-2.1
 block_cipher = None
 
 a = Analysis(['src/app.py'],
