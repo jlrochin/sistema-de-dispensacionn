@@ -8,10 +8,8 @@ def cargar_o_generar_clave():
     en el directorio definido.
     """
     if not os.path.exists(CLAVE_PATH):
-        # Generar nueva clave si no existe
         clave = Fernet.generate_key()
         with open(CLAVE_PATH, "wb") as clave_file:
             clave_file.write(clave)
-    # Leer la clave del archivo
     with open(CLAVE_PATH, "rb") as clave_file:
         return clave_file.read()

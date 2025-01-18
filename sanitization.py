@@ -10,7 +10,6 @@ def marcar_sanitizados(driver, wait, log_dict=None):
         casilla_xpath = '//*[@id="formSurtimientoDetail:chkSanitConfirm"]/div[2]'
         casilla_element = wait.until(EC.presence_of_element_located((By.XPATH, casilla_xpath)))
 
-        # Verificar si la casilla ya está marcada
         if "ui-state-active" not in casilla_element.get_attribute("class"):
             casilla_element.click()
             time.sleep(1)
@@ -33,7 +32,6 @@ def marcar_sanitizados(driver, wait, log_dict=None):
 
 def dispensar_y_confirmar(driver, wait, log_dict=None):
     try:
-        # Presionar botón "Dispensar"
         if log_dict:
             log_message(log_dict, "INFO", "Presionando botón 'Dispensar'...")
         boton_dispensar_xpath = '//*[@id="formSurtimientoDetail:cmbDispensar"]/span[2]'
@@ -41,7 +39,6 @@ def dispensar_y_confirmar(driver, wait, log_dict=None):
         boton_dispensar.click()
         time.sleep(0.5)
 
-        # Confirmar dispensación
         if log_dict:
             log_message(log_dict, "INFO", "Confirmando dispensación...")
         boton_si_xpath = '//*[@id="formSurtimientoDetail:j_idt203"]/span[2]'
@@ -51,7 +48,6 @@ def dispensar_y_confirmar(driver, wait, log_dict=None):
             log_message(log_dict, "SUCCESS", "Dispensación confirmada.")
         time.sleep(0.5)
 
-        # Regresar a la tabla principal
         if log_dict:
             log_message(log_dict, "INFO", "Regresando a la tabla principal...")
         boton_regresar_xpath = '//*[@id="j_idt207"]/div[1]/a/span'
