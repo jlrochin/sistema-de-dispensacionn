@@ -1,8 +1,9 @@
 import os
 import subprocess
+from sys import version
 import time
-main
-import psutil
+import main
+import psutil # type: ignore
 
 def is_exe_running(exe_name):
     for proc in psutil.process_iter(['name']):

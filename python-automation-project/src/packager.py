@@ -1,6 +1,7 @@
 import os
 import subprocess
-main
+from sys import version
+import main
 import time
 import fcntl
 
